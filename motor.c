@@ -1,5 +1,5 @@
 /*
- * Motor.c
+ * Motor.c salut
  * Adrien, le 03 nov. 2016
  * Fonctions relatives au moteur.
  *
