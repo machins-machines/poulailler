@@ -10,28 +10,28 @@
  */
 #include "configuration.h" 
  
-//// States
-//void led_on();
-//void led_off();
-//
-//// State pointer
-//void (*statefunc)() = led_on;
-//
-//// Global variables
-//int x = 0;    // variable
-// 
-//// Routines
-//void led_on()
-//{
-//  Serial.print("I'm on.\n");       // prints a label
-//  statefunc = led_off;
-//}
-//
-//void led_off()
-//{
-//  Serial.print("I'm off.\n");       // prints a label
-//  statefunc = led_on;
-//}
+// States
+void led_on();
+void led_off();
+
+// State pointer
+void (*statefunc)() = led_on;
+
+// Global variables
+int x = 0;    // variable
+ 
+// Routines
+void led_on()
+{
+  Serial.print("I'm on.\n");       // prints a label
+  statefunc = led_off;
+}
+
+void led_off()
+{
+  Serial.print("I'm off.\n");       // prints a label
+  statefunc = led_on;
+}
 
 /**
  * \fn void setup()
@@ -50,7 +50,7 @@ void setup() {
  * the loop routine runs over and over again forever:
  */
 void loop() {  
-  //(*statefunc)();
+  (*statefunc)();
   Serial.print("Try again !\n");
   delay(2000);
 }
