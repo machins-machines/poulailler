@@ -5,10 +5,12 @@
  *
  *
  */
+#include "motor.h"
+
 
 unsigned int rotate_left()
 {
-  Serial.print("I turn left\n");
+  
   return 1;
 }
 

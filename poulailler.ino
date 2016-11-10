@@ -8,11 +8,30 @@
  * Programme de test pour l'objet de gestion des chaînes de caractères Str_t.
  *
  */
-#include "motor.h"
-#include "configuration.h"
-
+#include "configuration.h" 
  
-int x = 0;    // variable
+//// States
+//void led_on();
+//void led_off();
+//
+//// State pointer
+//void (*statefunc)() = led_on;
+//
+//// Global variables
+//int x = 0;    // variable
+// 
+//// Routines
+//void led_on()
+//{
+//  Serial.print("I'm on.\n");       // prints a label
+//  statefunc = led_off;
+//}
+//
+//void led_off()
+//{
+//  Serial.print("I'm off.\n");       // prints a label
+//  statefunc = led_on;
+//}
 
 /**
  * \fn void setup()
@@ -31,10 +50,8 @@ void setup() {
  * the loop routine runs over and over again forever:
  */
 void loop() {  
-  // print labels
-  Serial.print("Sllut !");       // prints a label
-  Serial.print("\t");              // prints a tab
-  Serial.println("");      // prints another carriage return
+  //(*statefunc)();
+  Serial.print("Try again !\n");
   delay(2000);
 }
 
